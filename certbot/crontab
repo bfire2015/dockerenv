@@ -1,0 +1,3 @@
+#每月01号05:00执行
+* * * * * echo $(date "+[%Y-%m-%d %H:%M:%S]") >> /var/log/crontab.log
+0 5 1 * * /data/wwwroot/docker/certbot/renew.sh

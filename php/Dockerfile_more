@@ -1,0 +1,26 @@
+# Redis 扩展下载 pecl本地安装 开启扩展
+RUN wget http://pecl.php.net/get/redis-4.0.0.tgz -O /tmp/redis.tgz \
+	&& pecl install /tmp/redis.tgz \
+	&& rm -rf /tmp/redis.tgz \
+	&& docker-php-ext-enable redis
+
+# msgpack 扩展下载 pecl本地安装 开启扩展(延迟队列使用减少源数据占用空间)
+RUN wget http://pecl.php.net/get/msgpack-2.0.3.tgz -O /tmp/msgpack.tgz \
+	&& pecl install /tmp/msgpack.tgz \
+	&& rm -rf /tmp/msgpack.tgz \
+	&& docker-php-ext-enable msgpack
+
+# xhprof github上下载支持php7的扩展 安装 开启扩展
+RUN wget https://github.com/longxinH/xhprof/archive/v2.0.5.tar.gz -O /tmp/xhprof.tar.gz \
+	&& mkdir -p /tmp/xhprof \
+	&& tar -xf /tmp/xhprof.tar.gz -C /tmp/xhprof --strip-components=1 \
+	&& rm /tmp/xhprof.tar.gz \
+	&& ( \
+		cd /tmp/xhprof/extension \
+		&& phpize \
+		&& ./configure  \
+		&& make -j$(nproc) \
+		&& make install \
+	) \
+	&& rm -r /tmp/xhprof \
+	&& docker-php-ext-enable xhprof

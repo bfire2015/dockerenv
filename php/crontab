@@ -1,0 +1,7 @@
+# /etc/crontab: system-wide crontab
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# m h dom mon dow user command
+* * * * * www /data/wwwroot/docker/php/crontab_www.sh.php
+#
