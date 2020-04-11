@@ -77,6 +77,16 @@ git clone https://github.com/bfire2015/dockerenv.git
 
 # 四、启动docker
 
+## 1、注意文件可执行权限
+
+/data/wwwroot/dockerenv/
+chmod 777 ./run.sh
+
+
+## 2、各个项目下的run.sh 
+
+chmod 777 ./run.sh
+
   cd /data/wwwroot/dockerenv/portainer/ && ./run.sh run vm reset （可视化管理工具portainer）
 
   cd /data/wwwroot/dockerenv/php/ && ./run.sh run vm reset

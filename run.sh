@@ -10,7 +10,6 @@
 #9200			elasticsearch
 #8088			tomcat
 #3307			phpmyadmin
-#8181			icbc
 
 #./run.sh build/push/pull/run/dev vm/demo/on reset
 
@@ -23,17 +22,17 @@ run(){
 #重置容器
 reset(){
 	tip '停止容器'
-	docker stop $name
+	docker stop $cname
 	tip '删除容器'
-	docker rm $name
+	docker rm $cname
 }
 
 #本地环境添加host到容器
 vmhost(){
 	if [ $1 == 'vm' ]; then
-		ret='--add-host vm-bfire.vip:10.0.2.15 --add-host syslib.vm-bfire.vip:10.0.2.15 --add-host pay.vm-bfire.vip:10.0.2.15 --add-host auth.vm-bfire.vip:10.0.2.15 --add-host zh.vm-bfire.vip:10.0.2.15 --add-host open.vm-bfire.vip:10.0.2.15 --add-host sa.vm-bfire.vip:10.0.2.15 --add-host demo-bfire.vip:192.168.2.252'
+		ret='--add-host vm-bfire.vip:10.211.55.5 --add-host bookmark.vm-bfire.vip:10.211.55.5 --add-host vm-seedaojia.com:10.211.55.5 --add-host bookmark.vm-seedaojia.com:10.211.55.5 --add-host www.hk.vm-seedaojia.com:10.211.55.5 --add-host h5.hk.vm-seedaojia.com:10.211.55.5 --add-host pay.hk.vm-seedaojia.com:10.211.55.5 --add-host upload.hk.vm-seedaojia.com:10.211.55.5 --add-host api.hk.vm-seedaojia.com:10.211.55.5 --add-host crm.hk.vm-seedaojia.com:10.211.55.5 --add-host admin.hk.vm-seedaojia.com:10.211.55.5'
 	elif [ $1 == 'demo' ]; then
-		ret='--add-host demo-bfire.vip:192.168.2.252 --add-host syslib.demo-bfire.vip:192.168.2.252 --add-host auth.demo-bfire.vip:192.168.2.252 --add-host zh.demo-bfire.vip:192.168.2.252'
+		ret='--add-host demo-bfire.vip:120.79.82.52'
 	else
 		ret=''
 	fi
@@ -52,7 +51,7 @@ err(){
 
 #初始化事件
 names=$name:$tag
-namefull='docker.bfire.vip/'$names
+namefull='docker.io/'$names
 fonts=/data/wwwroot/dockerenv/@fonts/
 
 if [[ $1 && $1 = 'dev' ]]; then #使用本地的镜像运行
