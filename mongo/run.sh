@@ -16,7 +16,7 @@ run_before(){
 cmd(){
 	cmd="docker run --name $name \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	-v /data/wwwroot:/data/wwwroot \
 	-v $dbPath:/data/db \
 	-v $dbPath/config:/data/configdb \

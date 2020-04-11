@@ -20,7 +20,7 @@ cmd(){
 	tip "配置目录【$conf】"
 	cmd="docker run --name $name \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	-v /data/wwwroot/docker/nginx/$conf:/etc/nginx/conf.d \
 	-v /data/wwwroot/docker/nginx/nginx.conf:/etc/nginx/nginx.conf \
 	-v /data/wwwroot/docker/nginx/conf:/etc/nginx/conf \

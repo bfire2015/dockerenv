@@ -18,7 +18,7 @@ cmd(){
 	cmd="docker run --name $name \
 	-e SERVER_TYPE=$2 \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	-v /data/wwwroot/docker/php/php$conf.ini:/usr/local/etc/php/php.ini \
 	-v /data/wwwroot/docker/php/php-fpm$conf.conf:/usr/local/etc/php-fpm.conf \
 	-v /data/wwwroot/docker/php/php-fpm.d:/usr/local/etc/php-fpm.d \

@@ -5,7 +5,7 @@ tag='1.0'
 cmd(){
 	cmd="docker run --name $name \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	-v /data/wwwroot:/data/wwwroot \
 	-v /data/docker/certbot:/var/log \
 	-v /etc/letsencrypt:/etc/letsencrypt \

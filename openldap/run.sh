@@ -5,7 +5,7 @@ tag='1.3.0'
 cmd(){
 	cmd="docker run --name $name \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	--hostname openldap-host \
 	-v /data/wwwroot/docker/openldap/data:/var/lib/ldap \
 	-v /data/wwwroot/docker/openldap/conf/slapd.d:/etc/ldap/slapd.d \

@@ -65,6 +65,10 @@ docker info
 
 # 二、获取代码
 
+## 1、项目位置
+mkdir 755 /data/wwwroot/
+
+## 2、拉取源码
 git clone https://github.com/bfire2015/dockerenv.git
 
 # 三、安装网络

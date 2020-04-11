@@ -5,7 +5,7 @@ tag='3.0'
 cmd(){
 	cmd="docker run --name $name \
 	--restart=always \
-	--network ch-net \
+	--network bf-net \
 	-v /data/wwwroot:/data/wwwroot \
 	-v /data/docker/data/vuecli:/root/.vue-cli-ui \
 	-p 8000:8000 -p 8080:8080 -p 8081:8081 -p 8082:8082 \
