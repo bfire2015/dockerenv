@@ -2,7 +2,7 @@
 FROM daocloud.io/nginx:1.16.0-alpine
 
 #维护者信息
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 RUN echo "www:x:1000:1000::/home:/bin/sh" >> /etc/passwd
 RUN echo "vboxsf:x:995:root,www" >> /etc/group

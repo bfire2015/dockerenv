@@ -1,6 +1,6 @@
 FROM mariadb:10.4.11
 
 #维护者信息
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 RUN echo "alias ll='ls -laF --color=auto'" >> ~/.bashrc

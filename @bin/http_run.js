@@ -28,7 +28,7 @@ var callback = (ret, ok) => {
 };
 
 var log = s => {
-	var dir = '/data/wwwroot/syslib/data/' + date('Ym') + '/docker_' + $name + '/';
+	var dir = '/data/wwwroot/dockerenv_log/data/' + date('Ym') + '/docker_' + $name + '/';
 	exec('mkdir -p ' + dir, () => {
 		fs.appendFile(dir + date('Y-m-d') + '.php', "[" + date() + "]\t[" + $workid + "-" + $No + "]\t" + s + "\n", err => {
 			err && console.log('日志写入失败', err);

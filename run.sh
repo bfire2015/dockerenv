@@ -53,7 +53,7 @@ err(){
 #初始化事件
 names=$name:$tag
 namefull='docker.bfire.vip/'$names
-fonts=/data/wwwroot/docker/@fonts/
+fonts=/data/wwwroot/dockerenv/@fonts/
 
 if [[ $1 && $1 = 'dev' ]]; then #使用本地的镜像运行
 	tip '开发运行 '$names

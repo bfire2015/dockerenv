@@ -1,6 +1,6 @@
 FROM mongo:3.4.23
 
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 ADD mongod.conf /etc/
 

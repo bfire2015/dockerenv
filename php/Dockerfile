@@ -1,5 +1,5 @@
 FROM daocloud.io/php:7.2.4-fpm
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 # 将本地源文件复制到镜像
 ADD sources.list /etc/apt/sources.list

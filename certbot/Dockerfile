@@ -1,6 +1,6 @@
 FROM alpine:3.11.2
 
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories && apk add --update bash bash-doc bash-completion
 RUN apk add --no-cache certbot=1.0.0-r0 nodejs=12.15.0-r1

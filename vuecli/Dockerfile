@@ -1,7 +1,7 @@
 FROM node:13.5-alpine
 
 #维护者信息
-MAINTAINER StevenAn<alz8888@qq.com>
+MAINTAINER bfire<bfire2013@gmail.com>
 
 RUN npm config set registry https://registry.npm.taobao.org
 RUN npm install -g @vue/cli
