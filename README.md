@@ -82,8 +82,18 @@ git clone https://github.com/bfire2015/dockerenv.git
 /data/wwwroot/dockerenv/
 chmod 777 ./run.sh
 
+## 2、nginx 以www.www 身份来执行
 
-## 2、各个项目下的run.sh 
+没有则需要创建:
+
+用户组的添加和删除：
+groupadd www 组的添加
+groupdel www 组的删除
+
+添加用户：useradd -m 用户名  然后设置密码  passwd 用户名
+删除用户：userdel  -r  用户名
+
+## 3、各个项目下的run.sh 
 
 chmod 777 ./run.sh
 

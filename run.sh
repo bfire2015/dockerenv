@@ -54,6 +54,14 @@ names=$name:$tag
 namefull='docker.io/'$names
 fonts=/data/wwwroot/dockerenv/@fonts/
 
+if [[ $name = 'php' ]]; then
+	namefull='daocloud.io/'$names
+elif [[ $name = 'nginx' ]]; then
+	namefull='daocloud.io/'$names
+else
+	namefull='docker.io/'$names
+fi
+
 if [[ $1 && $1 = 'dev' ]]; then #使用本地的镜像运行
 	tip '开发运行 '$names
 	reset
